@@ -6,14 +6,15 @@ export let user = {
     },
     
     setFullName(fullName) {
-        const [firstName, lastName] = fullName.split(' ');
         
-         this.firstName = firstName;
-         this.lastName = lastName
+        // const [firstName, lastName] = fullName.split(' ');
+        //  this.firstName = firstName;
+        //  this.lastName = lastName
              
         
-        //  this.firstName = fullName.split(' ')[0]; 
-        //  this.lastName = fullName.split(' ')[1];  
+         this.firstName = fullName.split(' ')[0]; 
+         this.lastName = fullName.split(' ')[1];  
+        
         //  console.log(fullName.split(' '));
     }
 };
