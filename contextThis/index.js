@@ -4,10 +4,11 @@ export let user = {
     getFullName() {
         return (`${this.firstName} ${this.lastName}`);
     },
-    setFullName(fullName) {
+    
+    setFullName(value) {
         // const [firstName, lastName] = fullName.split(' ');
         
-        let split = fullName.split(' ');
+        let split = value.split(' ');
         this.firstName = split[0];
         this.lastName = split[1];
         
