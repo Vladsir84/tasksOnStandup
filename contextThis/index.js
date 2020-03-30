@@ -7,8 +7,13 @@ export let user = {
     setFullName(fullName) {
         // const [firstName, lastName] = fullName.split(' ');
         
-         this.firstName = fullName.split(' ')[0]; 
-         this.lastName = fullName.split(' ')[1];  
+        let split = fullName.split(' ');
+        this.firstName = split[0];
+        this.lastName = split[1];
+        
+        
+        //  this.firstName = fullName.split(' ')[0]; 
+        //  this.lastName = fullName.split(' ')[1];  
         //  console.log(fullName.split(' '));
 
         //  this.firstName = firstName;
