@@ -16,7 +16,7 @@ const user = {
     }
 };
 
-user.getFullName();
+// user.getFullName();
 
-user.setFullName('Jack Daniels');
+// user.setFullName('Jack Daniels');
 
