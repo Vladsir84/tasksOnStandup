@@ -1,7 +1,7 @@
 const user = {
     firstName: 'Tom',
     lastName: 'Ford',
-    getFullName: function() {
+    getFullName() {
         console.log(`${this.firstName} ${this.lastName}`);
     },
     setFullName(fullName) {
