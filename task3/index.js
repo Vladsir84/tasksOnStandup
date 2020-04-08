@@ -1,4 +1,4 @@
-export function calculator(a, b) {
+function calculator(a, b) {
     switch(this.operation) {
         case '+':
             return a + b;
@@ -21,7 +21,7 @@ export function calculator(a, b) {
  */
 // ...your code here
 
-export const multiplier = calculator.bind({operation: '*'});
+const multiplier = calculator.bind({operation: '*'});
 console.log(multiplier());
 /*
  * Ф-ция summator должна быть создана на основе calculator
@@ -31,7 +31,7 @@ console.log(multiplier());
 // ...your code here
 
  
-export const summator = calculator.bind({operation: '+'});
+const summator = calculator.bind({operation: '+'});
 console.log(summator());
 /*
  * Ф-ция twice должна быть создана на основе calculator
@@ -41,5 +41,8 @@ console.log(summator());
 // ...your code here
 
 
-export const twice = calculator.bind({operation: '*'}, 2);
+const twice = calculator.bind({operation: '*'}, 2);
 console.log(twice(2));
+
+const result = calculator.call({operation: '+'}, 7, 9);
+console.log(result);
