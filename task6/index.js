@@ -1,5 +1,7 @@
-// const finishList = () => {
+export const finishList = () => {
     let ulElem = document.querySelector('.list');
+    let special = document.querySelector('.special');
+    
     let liElem1 = document.createElement('li');
     let liElem2 = document.createElement('li');
     let liElem3 = document.createElement('li');
@@ -9,5 +11,8 @@
     liElem3.textContent = '4';
     liElem4.textContent = '6';
     
-    liElem1.append(ulElem)
-// }
+    ulElem.prepend(liElem1);
+    ulElem.append(liElem2);
+    special.before(liElem3);
+    special.after(liElem4);
+}
