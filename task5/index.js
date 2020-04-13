@@ -1,6 +1,6 @@
 export const setButton = (buttonText) => {
   let bodyElem = document.querySelector('body');
-  bodyElem.innerHTML = `<button>${text}</button>`
+  bodyElem.innerHTML = `<button>${buttonText}</button>`
 //   bodyElem.textContent = '<button>button text</button>'
-  buttonText = text;
+ 
 }
