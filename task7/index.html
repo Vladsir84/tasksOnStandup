@@ -29,11 +29,12 @@
         const list = document.querySelector('.list');
         
         function handleClick(event) {
-            const isListItem = Boolean(event.target.closest('.list-item'));
+            const isListItem = event.target.closest('.list-item');
             
-            if(isListItem) {
-                console.log(event.target.textContent);
+            if(!isListItem) {
+             return;    
             }
+            console.log(event.target.textContent);
         }
         
         list.addEventListener('click', handleClick);
