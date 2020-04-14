@@ -5,7 +5,7 @@ function handleClick(event) {
     const isListItem = Boolean(event.target.closest('.list-item'));
     
     if(isListItem) {
-        console.log(event.target.innerHTML);
+        console.log(event.target);
     }
 }
 
