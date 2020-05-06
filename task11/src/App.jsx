@@ -1,8 +1,9 @@
-// import React from 'react';
+import React from 'react';
+import Auth from './Auth'
 
-// function App() {
-//     return <Auth />;
-// };
+function App() {
+    return <Auth />;
+};
 
 
-// export default App;
+export default App;
