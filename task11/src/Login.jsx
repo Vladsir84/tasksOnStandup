@@ -1,13 +1,13 @@
 import React from 'react';
 
 
-function Login ({ handleLogin }) {
+function Login ({ onLogin }) {
 
     return (
         <button
             type = "button"
             className="login btn"
-            onClick={handleLogin}
+            onClick={onLogin}
         >
             Login
         </button>

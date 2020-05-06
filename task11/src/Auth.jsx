@@ -45,10 +45,10 @@ class Auth extends Component {
         }
 
         if (isLoggedIn) {
-            return <Logout handleLogout={this.onLogout} />;
+            return <Logout onLogout={this.onLogout} />;
         }
 
-        return <Login handleLogin={this.onLogin} />;
+        return <Login onLogin={this.onLogin} />;
     }
 
 }
