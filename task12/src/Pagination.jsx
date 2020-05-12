@@ -11,11 +11,11 @@ const Pagination = (props) => {
             <button
                 onClick={goPrev}
                 className="btn"
-                
+                type="button"
                 disabled={!isPrevPageAvailable}
                 >
                 
-                {isPrevPageAvailable && "←"}
+                {isPrevPageAvailable && '←'}
             
             </button>
             <span className="pagination__page">{currentPage + 1}</span>
@@ -23,9 +23,9 @@ const Pagination = (props) => {
                 onClick={goNext}
                 className="btn"
                 disabled={!isNextPageAvailable}
-               
+                type="button"
                 >
-                {isNextPageAvailable && "→"}
+                {isNextPageAvailable && '→'}
             </button>
         </div>
     );
