@@ -7,27 +7,27 @@ const rootElement = document.querySelector('#root');
 
 const users = [
     {
-       
+        id: 'id-0',
         name: 'Bob',
         age: 23,
     },
     {
-        
+        id: 'id-1',
         name: 'Tom',
         age: 24,
     },
     {
-       
+        id: 'id-2',
         name: 'John',
         age: 25
     },
     {
-        
+        id: 'id-3',
         name: 'James',
         age: 21
     },
     {
-       
+        id: 'id-4',
         name: 'Nik',
         age: 27
     },
@@ -53,9 +53,9 @@ const users = [
     },
 ];
 
-const newUsers = users.map((user, index) => {
-     const newUser = { ...user, id: index};
-    return newUser
-    });
+// const newUsers = users.map((user, index) => {
+//      const newUser = { ...user, id: index};
+//     return newUser
+//     });
 
-ReactDOM.render(<UsersList users={newUsers}/>, rootElement);
+ReactDOM.render(<UsersList users={users}/>, rootElement);

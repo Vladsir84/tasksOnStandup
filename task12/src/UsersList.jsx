@@ -47,10 +47,9 @@ class UsersList extends Component {
                     itemsPerPage={itemsPerPage}
                 />
                 <ul className="users">
-                    {usersList.map((user) => (
-                        <User key={user.id} user={user} />
+                {usersList.map(user => (
+                        <User key={user.id} {...user} />
                     ))}
-
                 </ul>
             </div>
         );
