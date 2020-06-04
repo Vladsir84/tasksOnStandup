@@ -4,9 +4,10 @@ class User extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            avatar_url: 'https://avatars1.githubusercontent.com/u/9919?v=4',
-            name: 'Github',
-            location: 'San Francisco,CA'
+
+            avatar_url: "https://avatars1.githubusercontent.com/u/9919?v=4",
+            name: "Github",
+            location: "San Francisco,CA",
         };
 
     }
@@ -17,7 +18,7 @@ class User extends Component {
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.userId !== this.props.match.params.userId) {
-            this.fetchUser();
+            this.fetchUser(this.props.match.params.userId);
 
         }
     }
@@ -38,7 +39,7 @@ class User extends Component {
                 });
             });
     }
-   
+
     render() {
         const { avatar_url, name, location } = this.state;
         return (
