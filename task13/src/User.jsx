@@ -15,9 +15,9 @@ class User extends Component {
     componentDidMount() {
         this.fetchUser();
     }
-
     
-    fetchUser = () => {
+    
+    fetchUser () {
         
         const { match } = this.props;
         
@@ -33,7 +33,8 @@ class User extends Component {
             });
         });
     }
-   
+    
+    
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.userId !== this.props.match.params.userId) {
             this.fetchUser(this.props.match.params.userId);
