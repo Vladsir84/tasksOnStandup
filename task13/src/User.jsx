@@ -16,30 +16,31 @@ class User extends Component {
         this.fetchUser();
     }
 
+    
+    fetchUser = () => {
+        
+        const { match } = this.props;
+        
+        fetch(`https://api.github.com/users/${match.params.userId}`)
+        .then(response => response.json())
+        .then((data) => {
+            const { avatar_url, name, location } = data;
+            
+            this.setState({
+                avatar_url,
+                name,
+                location,
+            });
+        });
+    }
+   
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.userId !== this.props.match.params.userId) {
             this.fetchUser(this.props.match.params.userId);
 
         }
     }
-
-    fetchUser = () => {
-
-        const { match } = this.props;
-
-        fetch(`https://api.github.com/users/${match.params.userId}`)
-            .then(response => response.json())
-            .then((data) => {
-                const { avatar_url, name, location } = data;
-
-                this.setState({
-                    avatar_url,
-                    name,
-                    location,
-                });
-            });
-    }
-
+    
     render() {
         const { avatar_url, name, location } = this.state;
         return (
