@@ -8,11 +8,11 @@ const App = () => {
         <div className="page">
             <ul className="navigation">
                 <li className="navigation__item">
-                    <Link to="/users">Users</Link>
+                    <Link to="/">Home</Link>
 
                 </li>
                 <li className="navigation__item">
-                    <Link to="/">Home</Link>
+                    <Link to="/users">Users</Link>
                 </li>
             </ul>
             <Switch>
@@ -20,8 +20,6 @@ const App = () => {
                     <Home />
                 </Route>
                 <Route path="/users" component={Users} />
-                   
-                {/* </Route> */}
             </Switch>
         </div>
     );

@@ -38,11 +38,7 @@ class User extends Component {
                 });
             });
     }
-    // shouldComponentUpdate() {
-    //     console.log('shouldComponentUpdate');
-    // }
-
-
+   
     render() {
         const { avatar_url, name, location } = this.state;
         return (
