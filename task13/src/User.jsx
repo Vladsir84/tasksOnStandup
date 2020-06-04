@@ -17,7 +17,7 @@ class User extends Component {
     }
     
     
-    fetchUser () {
+    fetchUser = () => {
         
         const { match } = this.props;
         
